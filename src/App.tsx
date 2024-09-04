@@ -1,9 +1,16 @@
-import './App.css'
+import "./App.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
+
+  document.title = "Página inicial"
   return (
-    <h1>Oi</h1>
-  )
+    <>
+      <Header navegation="LOGIN"/>
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

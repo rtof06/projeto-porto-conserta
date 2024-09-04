@@ -1,0 +1,26 @@
+.footer {
+   font-family: var(--secondary-font);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1em;
+   background-color: var(--primary-color-low-opacity);
+}
+
+.social-media__list {
+   display: flex;
+}
+
+.copyright {
+   text-align: center;
+}
+
+.copyright__company {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.company-logo {
+   width: 50px;
+}
