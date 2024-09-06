@@ -1,3 +1,15 @@
+:root {
+  --primary-font: "Lexend", sans-serif;
+  --secondary-font: "Fredoka", sans-serif;
+  --title-font: "Francois One", sans-serif;
+  --primary-color: #00b2e5;
+  --primary-color-low-opacity: rgb(0, 178, 229, 0.4);
+  --secondary-color: #9E3FFE;
+  --grey-color: #5B5B5B;
+  --amplexus-color: linear-gradient(180deg, rgba(0,178,229,1) 0%, rgba(158,63,254,1) 100%);
+  --aux-color: #FFFFFF;
+}
+
 *, *::before, *::after {
    box-sizing: border-box;
  }

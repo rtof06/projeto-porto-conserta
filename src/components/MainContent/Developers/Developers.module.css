@@ -1,0 +1,39 @@
+.developers {
+   margin: 1em 0;
+}
+
+.team-title {
+   font-family: var(--secondary-font);
+   font-size: 2rem;
+   padding: 1em;
+   font-weight: 500;
+   text-shadow: 2px 2px 10px #000;
+}
+
+.team {
+   display: flex;
+   justify-content: center;
+}
+
+.developer {
+   display: flex;
+   flex-direction: column;
+   font-family: var(--secondary-font);
+   font-size: 1.3rem;
+   font-weight: 400;
+   align-items: center;
+   text-shadow: 2px 2px 5px #000;
+}
+
+.dev-picture {
+   border-radius: 50%;
+   width: 50%;
+   border: .3em solid transparent;
+   box-shadow: 2px 2px 10px #000;
+   transition: .2s ease-in;
+}
+
+.dev-picture:hover {
+   box-shadow: 4px 4px 20px var(--secondary-color);
+   cursor: pointer;
+}

@@ -1,20 +1,32 @@
 import style from "./Header.module.css";
-import logoAmplexus from "../../img/logoAmplexus.png";
+import logoAmplexus from "../../public/logoAmplexus.png";
+import { Link } from "react-router-dom";
 
 type HeaderProps = {
-   navegation: string
-}
+  page: string;
+  path: string;
+};
 
-export default function Header({navegation}:HeaderProps) {
+export default function Header({ page, path }: HeaderProps) {
   return (
     <div className={style.header}>
-      <img src={logoAmplexus} alt="Logo AmplexusTech" className={style.logo} />
+      <Link to={"/"}>
+        <img
+          src={logoAmplexus}
+          alt="Logo AmplexusTech"
+          className={style.logo}
+          title="Página inicial"
+        />
+      </Link>
+      {/* Navbar */}
       <nav className={style.navbar}>
-         <ul>
-            <li className={style.list}>
-               <a href="#" className={style.list__item}>{navegation}</a>
-            </li>
-         </ul>
+        <ul>
+          <li className={style.list}>
+            <Link to={path} className={style.list__item}>
+              {page}
+            </Link>
+          </li>
+        </ul>
       </nav>
     </div>
   );
