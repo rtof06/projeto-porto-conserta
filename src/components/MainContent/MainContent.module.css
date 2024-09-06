@@ -1,37 +1,22 @@
-.header {
+.container {
     text-align: center;
+    color: var(--aux-color);
 }
 
 .title {
-    
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-size: 4rem;
 }
 
 .subtitle {
-    font-family: var(--primary-font);
-    margin: 2em 0;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .paragraph {
     font-family: var(--primary-font);
-    margin: 5em 10em;
-}
-
-.team-title {
-    font-family: var(--secondary-font);
-    padding: 1em;
-}
-
-.team {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-}
-
-.developer {
-    font-family: var(--secondary-font);
-    font-weight: 700;
-}
-
-.dev-picture {
-    border-radius: 50%;
+    margin: 3em;
+    font-size: 1.5rem;
 }
