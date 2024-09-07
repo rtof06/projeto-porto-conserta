@@ -1,5 +1,5 @@
 import style from "./Header.module.css";
-import logoAmplexus from "../../public/logoAmplexus.png";
+import logoAmplexus from "../../img/logoAmplexus.png";
 import { Link } from "react-router-dom";
 
 type HeaderProps = {

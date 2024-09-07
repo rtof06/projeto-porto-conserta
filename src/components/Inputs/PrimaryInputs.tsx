@@ -1,11 +1,32 @@
+import style from "./PrimaryInputs.module.css";
+
 interface PrimaryInputProps {
-   name:string,
-   value:string,
-   onChange():void
+  type: React.HTMLInputTypeAttribute;
+  name: string;
+  id: string;
+  placeholder?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  required?: boolean;
 }
 
-export default function PrimaryInput({name, value, onChange} : PrimaryInputProps) {
-   return (
-      <input type="text" placeholder="" name={name} value={value} onChange={onChange}/>
-   )
+export default function PrimaryInput({
+  type,
+  name,
+  id,
+  placeholder,
+  onChange,
+  required,
+}: PrimaryInputProps) {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      name={name}
+      id={id}
+      onChange={onChange}
+      className={style.input}
+      required={required}
+      
+    />
+  );
 }

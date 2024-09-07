@@ -8,6 +8,7 @@
   --grey-color: #5B5B5B;
   --amplexus-color: linear-gradient(180deg, rgba(0,178,229,1) 0%, rgba(158,63,254,1) 100%);
   --aux-color: #FFFFFF;
+  --input-color: rgb(255, 255, 255, .7);
 }
 
 *, *::before, *::after {
