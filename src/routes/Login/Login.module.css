@@ -7,18 +7,86 @@
 
 .login {
    background-color: rgba(255, 255, 255, 0.5);
-   padding: 1em;
+   padding: 2em;
    border-radius: 10px;
+   margin: 2em;
 }
 
 .title {
    text-align: center;
    font-weight: 400;
    color: var(--grey-color);
+   padding-bottom: 1em;
 }
 
 .form {
    display: flex;
    flex-direction: column;
    gap: 1em;
+}
+
+.formControl {
+   display: grid;
+   grid-template-columns: 1em auto;
+   gap: 0.5em;
+}
+
+.rememberMe {
+   display: grid;
+   place-content: center;
+   appearance: none;
+   background-color: #fff;
+   margin: 0;
+   font: inherit;
+   color: var(--primary-color);
+   width: 1.15em;
+   height: 1.15em;
+   border: 0.15em solid var(--grey-color);
+   border-radius: 0.15em;
+   transform: translateY(-0.075em);
+}
+
+.rememberMe::before {
+   content: "";
+   width: 0.65em;
+   height: 0.65em;
+   transform: scale(0);
+   transition: 120ms transform ease-in-out;
+   box-shadow: inset 1em 1em var(--primary-color);
+}
+
+.rememberMe:checked::before {
+   transform: scale(1);
+}
+
+.esqueciSenha {
+   text-decoration: none;
+   color: var(--grey-color);
+}
+
+.esqueciSenha:hover {
+   border-bottom: 2px solid var(--grey-color);
+}
+
+.signup {
+   margin: .8em;
+   border-radius: 10px;
+   background: var(--aux-color);
+   box-shadow: 1px 4px 2px var(--grey-color);
+   transition: .2s ease-in;
+}
+
+.signup:hover {
+   background-color: var(--primary-color);
+}
+
+.signup__link {
+   text-decoration: none;
+   color: var(--primary-color);
+   padding: .5em;
+   transition: .2s ease-in;
+}
+
+.signup__link:hover {
+   color: var(--aux-color);
 }

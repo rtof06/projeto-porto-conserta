@@ -8,8 +8,10 @@ import Diagnostico from "./routes/Diagnostico/index.tsx";
 import Agendamento from "./routes/Agendamento/index.tsx";
 import Oficinas from "./routes/Oficinas/index.tsx";
 import ErrorPage from "./routes/ErrorPage/index.tsx";
+import EsqueceuASenha from "./routes/EsqueceuASenha/index.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "cadastro",
         element: <Cadastro />,
+      },
+      {
+        path: "esqueciMinhaSenha",
+        element: <EsqueceuASenha />,
       },
       {
         path: "diagnostico",
