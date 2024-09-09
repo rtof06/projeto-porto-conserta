@@ -6,9 +6,8 @@ import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Login() {
-
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -23,7 +22,7 @@ export default function Login() {
           <div className={style.email}>
             <PrimaryInput
               type="email"
-              placeholder="email"
+              placeholder="Email"
               name="email"
               id="email"
               onChange={(e) => setUsername(e.target.value)}
@@ -35,17 +34,24 @@ export default function Login() {
               type="password"
               name="password"
               id="password"
-              placeholder="senha"
+              placeholder="Senha"
               onChange={(e) => setPassword(e.target.value)}
               required={true}
             />
           </div>
           <div className={style["recall-forget"]}>
             <label className={style.formControl}>
-              <input type="checkbox" name="rememberMe" id="rememberMe" className={style.rememberMe} />
+              <input
+                type="checkbox"
+                name="rememberMe"
+                id="rememberMe"
+                className={style.rememberMe}
+              />
               Lembre-se de mim
             </label>
-            <Link to="/esqueciMinhaSenha" className={style.esqueciSenha}>Esqueceu a senha?</Link>
+            <Link to="/esqueciMinhaSenha" className={style.esqueciSenha}>
+              Esqueceu a senha?
+            </Link>
           </div>
           <Buttons type="submit" id="btnLogin">
             LOGIN

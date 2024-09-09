@@ -1,11 +1,12 @@
 import style from "./PrimaryInputs.module.css";
 
-interface PrimaryInputProps {
+type PrimaryInputProps = {
   type: React.HTMLInputTypeAttribute;
   name: string;
   id: string;
   placeholder?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  value?: string | number | readonly string[];
   required?: boolean;
 }
 
@@ -15,6 +16,7 @@ export default function PrimaryInput({
   id,
   placeholder,
   onChange,
+  value,
   required,
 }: PrimaryInputProps) {
   return (
@@ -25,8 +27,8 @@ export default function PrimaryInput({
       id={id}
       onChange={onChange}
       className={style.input}
+      value={value}
       required={required}
-      
     />
   );
 }
