@@ -83,7 +83,7 @@
 .signup__link {
    text-decoration: none;
    color: var(--primary-color);
-   padding: .5em;
+   padding: 1em;
    transition: .2s ease-in;
 }
 

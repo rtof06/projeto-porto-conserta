@@ -2,7 +2,7 @@ import style from "./Buttons.module.css";
 
 type ButtonsProps = {
   type?: "submit" | "reset" | "button";
-  id: string;
+  id:string
   children: React.ReactNode;
 };
 
