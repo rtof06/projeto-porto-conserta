@@ -1,5 +1,5 @@
-import style from "./CardOficina.module.css";
 import { useState } from "react";
+import style from "./CardOficina.module.css";
 import ModalOficina from "./ModalOficina/ModalOficina";
 
 type CardOficina = {
@@ -16,12 +16,12 @@ export default function CardOficina({ title, neighbourhood, uf }: CardOficina) {
       <button className={style.card} onClick={() => setIsModalVisible(true)}>
         {title} - {neighbourhood}/{uf}
       </button>
-      {isModalVisible ? (
-        <ModalOficina
-          title={title}
-          info={"Oficina da Porto localizada em " + neighbourhood + "/" + uf}
-        />
-      ) : null}
+      <ModalOficina
+        openModal={isModalVisible}
+        title={title}
+        adress="Av. Vital Brasil, 1935"
+        phone="(11) 97401-1923"
+      />
     </div>
   );
 }
