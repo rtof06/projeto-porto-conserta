@@ -6,22 +6,25 @@ type CardOficina = {
   title: string;
   neighbourhood: string;
   uf: string;
+  adress: string;
+  phone: string;
 };
 
-export default function CardOficina({ title, neighbourhood, uf }: CardOficina) {
+export default function CardOficina({ title, neighbourhood, uf, adress, phone }: CardOficina) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <div className={style.cardOficina}>
-      <button className={style.card} onClick={() => setIsModalVisible(true)}>
+      <button className={style.card} onClick={() => { setIsModalVisible(true) }}>
         {title} - {neighbourhood}/{uf}
       </button>
-      <ModalOficina
-        openModal={isModalVisible}
-        title={title}
-        adress="Av. Vital Brasil, 1935"
-        phone="(11) 97401-1923"
-      />
+      <ModalOficina isOpen={isModalVisible}>
+        <div className={style.content}>
+          <h2 className={style.cardTitle}>{title}</h2>
+          <p className={style.cardInfo}>{adress}</p>
+          <p className={style.cardInfo}>{phone}</p>
+        </div>
+      </ModalOficina>
     </div>
   );
 }
