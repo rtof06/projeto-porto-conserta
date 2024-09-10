@@ -1,0 +1,7 @@
+.card {
+    background-color: var(--aux-color);
+    border-radius: 10px;
+    border-top: solid 2px var(--primary-color);
+    padding: 1em;
+    margin: 1em;
+}

@@ -1,0 +1,19 @@
+.container {
+    background-color: var(--aux-color);
+    border-radius: 10px;
+    border-top: solid 2px var(--primary-color);
+    box-shadow: 2px 2px 4px var(--grey-color);
+    padding: 1em 1em 3em 1em;
+    text-align: left;
+}
+
+.close {
+    border: 0;
+    background: 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.content {
+    text-align: center;
+}
