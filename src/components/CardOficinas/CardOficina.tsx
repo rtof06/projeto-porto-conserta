@@ -18,7 +18,7 @@ export default function CardOficina({ title, neighbourhood, uf, adress, phone }:
       <button className={style.card} onClick={() => { setIsModalVisible(true) }}>
         {title} - {neighbourhood}/{uf}
       </button>
-      <ModalOficina isOpen={isModalVisible}>
+      <ModalOficina isOpen={isModalVisible} setModalOpen={() => setIsModalVisible(!isModalVisible)}>
         <div className={style.content}>
           <h2 className={style.cardTitle}>{title}</h2>
           <p className={style.cardInfo}>{adress}</p>

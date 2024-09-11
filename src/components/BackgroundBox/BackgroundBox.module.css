@@ -1,7 +1,12 @@
 .backgroundBox {
    background-color: var(--aux-color-low-opacity);
    width: 70%;
-   font-family: var(--primary-font);
    text-align: center;
    border-radius: 10px;
+   padding: 1em;
+}
+
+.backgroundBox-title {
+   font-family: var(--primary-font);
+   font-weight: 400;
 }

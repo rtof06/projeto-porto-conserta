@@ -1,0 +1,25 @@
+.container {
+   display: flex;
+   justify-content: center;
+   font-family: var(--secondary-font);
+}
+
+.servicoSelecionado {
+   font-weight: 400;
+   background-color: var(--aux-color);
+   border-radius: 10px;
+   border-top: solid 2px var(--primary-color);
+   box-shadow: 2px 2px 4px var(--grey-color);
+   margin: 1em;
+}
+
+.agendamento {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1em;
+}
+
+.agendamento input {
+   width: 50%;
+}

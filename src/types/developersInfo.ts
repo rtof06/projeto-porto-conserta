@@ -1,6 +1,6 @@
-import imgCarmona from "../../../img/CARMONA.png";
-import imgPedro from "../../../img/PEDRO.png";
-import imgRicardo from "../../../img/RICARDO.png";
+import imgCarmona from "../img/CARMONA.png";
+import imgPedro from "../img/PEDRO.png";
+import imgRicardo from "../img/RICARDO.png";
 
 export const developers: { image: string; name: string; rm: string; alt: string, insta: string, linkedin: string, github: string }[] =
    [

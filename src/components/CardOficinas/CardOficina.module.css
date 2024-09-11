@@ -1,7 +1,18 @@
+.cardOficina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .card {
     background-color: var(--aux-color);
     border-radius: 10px;
     border-top: solid 2px var(--primary-color);
     padding: 1em;
     margin: 1em;
+    font-family: var(--secondary-font);
+}
+
+.content {
+    font-family: var(--secondary-font);
 }

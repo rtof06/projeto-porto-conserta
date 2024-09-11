@@ -5,6 +5,9 @@ import Buttons from "../../components/Buttons/Buttons";
 import { FormEvent, useState } from "react";
 
 export default function Cadastro() {
+
+  document.title = "Cadastro"
+
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
   }

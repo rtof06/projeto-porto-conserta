@@ -1,5 +1,5 @@
 import style from "./Developers.module.css";
-import { developers } from "./developersInfo"
+import { developers } from "../../../types/developersInfo"
 
 export default function Developers() {
 

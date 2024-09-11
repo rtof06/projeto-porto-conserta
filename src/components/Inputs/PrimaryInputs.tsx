@@ -8,7 +8,7 @@ type PrimaryInputProps = {
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   value?: string | number | readonly string[];
   required?: boolean;
-}
+};
 
 export default function PrimaryInput({
   type,

@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Diagnostico />,
       },
       {
-        path: "agendamento",
+        path: "agendamento/:id",
         element: <Agendamento />,
       },
       {

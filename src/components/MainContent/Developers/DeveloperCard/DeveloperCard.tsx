@@ -1,5 +1,5 @@
 import style from "./DeveloperCard.module.css";
-import { developers } from "../developersInfo";
+import { developers } from "../../../../types/developersInfo";
 
 // type DeveloperCardProps = {
 //   image: string;
