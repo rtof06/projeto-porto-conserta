@@ -1,9 +1,10 @@
-import style from "./Login.module.css";
-import Header from "../../components/Header/Header";
-import PrimaryInput from "../../components/Inputs/PrimaryInputs";
-import Buttons from "../../components/Buttons/Buttons";
 import { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
+import Buttons from "../../components/Buttons/Buttons";
+import Header from "../../components/Header/Header";
+import PrimaryInput from "../../components/Inputs/PrimaryInputs";
+import style from "./Login.module.css";
+
 
 export default function Login() {
 
