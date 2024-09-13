@@ -1,4 +1,4 @@
-import erro404 from "../../img/img-404";
+import erro404 from "../../img/CARMONA.png";
 import style from "./ErrorPage.module.css";
 
 export default function ErrorPage() {
