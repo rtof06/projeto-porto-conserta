@@ -3,10 +3,10 @@ import Header from "../../components/Header/Header";
 import PrimaryInput from "../../components/Inputs/PrimaryInputs";
 import Buttons from "../../components/Buttons/Buttons";
 import { FormEvent, useState } from "react";
+import { users } from "../../auth/users";
 
 export default function Cadastro() {
-
-  document.title = "Cadastro"
+  document.title = "Cadastro";
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -27,6 +27,7 @@ export default function Cadastro() {
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
   const [plate, setPlate] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <div className={style.container}>
@@ -36,15 +37,15 @@ export default function Cadastro() {
         <form className={style.form} onSubmit={handleSubmit}>
           <section className={style.info}>
             <h2 className={style.subTitle}>INFORMAÇÕES PESSOAIS</h2>
-            <div className={style.input}>               
-                <PrimaryInput
+            <div className={style.input}>
+              <PrimaryInput
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Nome"
                 onChange={(e) => setName(e.target.value)}
                 required={true}
-              />                         
+              />
             </div>
             <div className={style.lastName}>
               <PrimaryInput
@@ -177,6 +178,8 @@ export default function Cadastro() {
                 type="number"
                 name="year"
                 id="year"
+                min={1900}
+                max={2030}
                 placeholder="Ano"
                 onChange={(e) => setYear(e.target.value)}
                 required={true}
@@ -193,6 +196,38 @@ export default function Cadastro() {
               />
             </div>
           </section>
+          <section className={style.info}>
+            <h2 className={style.subTitle}>
+              Crie uma senha (mín. de 3 caracteres e máximo de 8):
+            </h2>
+            <div className={style.passwordInput}>
+              <PrimaryInput
+                type="password"
+                name="password"
+                id="password"
+                minLength={3}
+                maxLength={8}
+                placeholder="Digite sua senha"
+                title="Digite sua senha (mín. de 3 caracteres e máximo de 8)"
+                onChange={(e) => setPassword(e.target.value)}
+                required={true}
+              />
+            </div>
+            <div className={style.passwordInput}>
+              <PrimaryInput
+                type="password"
+                name="password"
+                id="password"
+                minLength={3}
+                maxLength={8}
+                placeholder="Confirme sua senha"
+                title="Confirme sua senha (mín. de 3 caracteres e máximo de 8)"
+                onChange={(e) => setPassword(e.target.value)}
+                required={true}
+              />
+            </div>
+          </section>
+
           <Buttons type="submit" id="btnSingup">
             CADASTRAR
           </Buttons>

@@ -1,21 +1,45 @@
 import { FormEvent, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { users } from "../../auth/users";
 import Buttons from "../../components/Buttons/Buttons";
 import Header from "../../components/Header/Header";
 import PrimaryInput from "../../components/Inputs/PrimaryInputs";
 import style from "./Login.module.css";
 
-
 export default function Login() {
-
-  document.title = "Login"
+  document.title = "Login";
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
+  const validateEmail = (email: string) => {
+    return email?.includes("@") && email?.includes(".");
+  };
+
+  const validatePassword = (password: string) => {
+    return password?.length >= 4 && password?.length < 16;
+  };
+
+  const validateInputs = () => {
+    return validateEmail(username) && validatePassword(password);
+  };
+
+  const validateLogin = () => {
+    return users.some((user) => username === user.email && password === user.password)
   }
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      setLoading(true);
+      validateLogin() ? navigate("/diagnostico") : alert("Usuários ou senha incorretos")
+      setLoading(false);
+    } catch (err) {
+      alert("Algo deu erro." + err);
+    }
+  };
 
   return (
     <div className={style.container}>
@@ -57,7 +81,12 @@ export default function Login() {
               Esqueceu a senha?
             </Link>
           </div>
-          <Buttons type="submit" id="btnLogin">
+          <Buttons
+            type="submit"
+            id="btnLogin"
+            title={loading === true ? "Login" : "Termine seu login"}
+            disabled={loading === true || !validateInputs()}
+          >
             LOGIN
           </Buttons>
         </form>

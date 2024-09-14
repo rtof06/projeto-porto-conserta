@@ -9,33 +9,39 @@ import logoPorto from "../../img/poto-escuro.png";
 import style from "./Footer.module.css";
 
 export default function Footer() {
-  const redesSociais: {link:string, img: string, alt: string}[] = [
+  const redesSociais: {id: string, link:string, img: string, alt: string}[] = [
     {
+      id: "instagram",
       link: "https://instagram.com/portoseguro",
       img: `${logoInstragram}`,
       alt: "Logo Instagram"
     },
     {
+      id: "twitter",
       link: "https://twitter.com/portoseguro",
       img: `${logoX}`,
       alt: "Logo X"
     },
     {
+      id: "tiktok",
       link: "https://tiktok.com/portoseguro",
       img: `${logoTikTok}`,
       alt: "Logo TikTok"
     },
     {
+      id: "linkedin",
       link: "https://linkedin.com/in/porto",
       img: `${logoLinkedin}`,
       alt: "Logo LinkedIn"
     },
     {
+      id:"youtube",
       link: "https://youtube.com/portoseguro",
       img: `${logoYoutube}`,
       alt: "Logo Youtube"
     },
     {
+      id:"facebook",
       link: "https://facebook.com/portoseguro",
       img: `${logoFacebook}`,
       alt: "Logo Facebook"
@@ -48,7 +54,7 @@ export default function Footer() {
         <ul>
           <li className={style["social-media__list"]}>
             {redesSociais.map((rede) => (
-              <a href={rede.link} className={style.social}>
+              <a href={rede.link} className={style.social} key={rede.id}>
                 {" "}
                 <img src={rede.img} alt={rede.alt} />
               </a>

@@ -11,6 +11,13 @@
     padding: 1em;
     margin: 1em;
     font-family: var(--secondary-font);
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.card:hover {
+    background-color: var(--primary-color);
+    color: var(--aux-color);
 }
 
 .content {
