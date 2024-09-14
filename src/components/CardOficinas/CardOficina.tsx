@@ -10,15 +10,29 @@ type CardOficina = {
   phone: string;
 };
 
-export default function CardOficina({ title, neighbourhood, uf, adress, phone }: CardOficina) {
+export default function CardOficina({
+  title,
+  neighbourhood,
+  uf,
+  adress,
+  phone,
+}: CardOficina) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <div className={style.cardOficina}>
-      <button className={style.card} onClick={() => { setIsModalVisible(true) }}>
+      <button
+        className={style.card}
+        onClick={() => {
+          setIsModalVisible(true);
+        }}
+      >
         {title} - {neighbourhood}/{uf}
       </button>
-      <ModalOficina isOpen={isModalVisible} setModalOpen={() => setIsModalVisible(!isModalVisible)}>
+      <ModalOficina
+        isOpen={isModalVisible}
+        setModalOpen={() => setIsModalVisible(!isModalVisible)}
+      >
         <div className={style.content}>
           <h2 className={style.cardTitle}>{title}</h2>
           <p className={style.cardInfo}>{adress}</p>

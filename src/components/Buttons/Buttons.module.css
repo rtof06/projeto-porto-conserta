@@ -14,3 +14,7 @@
    background-color: var(--primary-color);
    color: var(--aux-color);
 }
+
+.button:disabled {
+   cursor: not-allowed;
+}

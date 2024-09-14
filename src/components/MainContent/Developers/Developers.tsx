@@ -8,7 +8,7 @@ export default function Developers() {
       <h2 className={style["team-title"]}>Time Amplexus Technology</h2>
       <div className={style.team}>
         {developers.map((dev) => (
-          <div className={style.developer}>
+          <div className={style.developer} key={dev.rm}>
             <img
               src={dev.image}
               alt={dev.alt}

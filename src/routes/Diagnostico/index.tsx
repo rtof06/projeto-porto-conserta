@@ -16,7 +16,7 @@ export default function Diagnostico() {
         <BackgroundBox title="DIAGNÓSTICO DO CARRO">
           <div className={style.diagnosticos}>
             {services.map((diagnostic) => (
-              <Link to={`/agendamento/${diagnostic.id}`}>
+              <Link to={`/agendamento/${diagnostic.id}`} key={diagnostic.id}>
                 {" "}
                 <Buttons
                   type="button"

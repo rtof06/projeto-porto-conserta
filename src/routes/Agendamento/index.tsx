@@ -8,19 +8,17 @@ import Buttons from "../../components/Buttons/Buttons";
 import style from "./Agendamento.module.css";
 
 export default function Agendamento() {
-
-  document.title = "Agendamento"
+  document.title = "Agendamento";
 
   const navigate = useNavigate();
-  const filter: string[] = ["Oficina", "Dia", "Horário"];
 
   const { id } = useParams();
-  const servico = services.find((service) => service.id == Number(id))
+  const servico = services.find((service) => service.id == Number(id));
 
   function handleAgendar(e: any) {
     e.preventDefault();
-    alert("Serviço agendado!")
-    navigate("/diagnostico")
+    alert("Serviço agendado!");
+    navigate("/diagnostico");
   }
 
   return (
@@ -28,20 +26,30 @@ export default function Agendamento() {
       <Header page="OFICINAS" path="/oficinas" />
       <div className={style.container}>
         <BackgroundBox title="AGENDAMENTO DE SERVIÇO">
-          <h2 className={style.servicoSelecionado}>Serviço selecionado: {servico?.service}</h2>
+          <h2 className={style.servicoSelecionado}>
+            Serviço selecionado: {servico?.service}
+          </h2>
           <div className={style.agendamento}>
-            {filter.map((filter) => (
-              <PrimaryInput
-                type="search"
-                name={filter}
-                id={"id" + filter}
-                placeholder={`Filtrar por ${filter}`}
-                onChange={() => "teste"}
-                required={true}
-              />
-            ))}
+            <PrimaryInput
+              type="search"
+              name="oficina"
+              id="idOficina"
+              placeholder="Filtrar por oficina"
+              onChange={() => "teste"}
+              required={true}
+            />
+            <PrimaryInput
+              type="date"
+              name="date"
+              id="idData"
+              placeholder="Escolha o dia"
+              onChange={() => "teste"}
+              required={true}
+            />
 
-            <Buttons type="submit" id="btnAgendar" onClick={handleAgendar}>AGENDAR</Buttons>
+            <Buttons type="submit" id="btnAgendar" onClick={handleAgendar}>
+              AGENDAR
+            </Buttons>
           </div>
         </BackgroundBox>
       </div>
