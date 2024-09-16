@@ -7,6 +7,7 @@ type PrimaryInputProps = {
   placeholder?: string;
   min?: number;
   max?: number;
+  inputmode?: "email" | "search" | "tel" | "text" | "url" | "none" | "numeric" | "decimal";
   minLength?: number;
   maxLength?: number;
   pattern?: string;
@@ -21,6 +22,7 @@ export default function PrimaryInput({
   name,
   id,
   placeholder,
+  inputmode,
   minLength,
   maxLength,
   min,
@@ -38,6 +40,7 @@ export default function PrimaryInput({
       name={name}
       id={id}
       onChange={onChange}
+      inputMode={inputmode}
       className={style.input}
       min={min}
       max={max}
