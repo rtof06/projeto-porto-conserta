@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 type HeaderProps = {
   page: string;
+  page2?: string;
   path: string;
+  path2: string;
 };
 
-export default function Header({ page, path }: HeaderProps) {
+export default function Header({ page, path, page2, path2 }: HeaderProps) {
   const navigate = useNavigate();
 
   const handleGoBack = (e: any) => {
@@ -26,7 +28,6 @@ export default function Header({ page, path }: HeaderProps) {
           title="Página inicial"
         />
       </Link>
-      {/* Navbar */}
       <nav className={style.navbar}>
         <ul>
           <li className={style.list}>
@@ -35,9 +36,14 @@ export default function Header({ page, path }: HeaderProps) {
                 {page}
               </Link>
             ) : (
-              <Link to={path} className={style.list__item}>
-                {page}
-              </Link>
+              <div className={style.pages}>
+                <Link to={path2} className={style.list__item}>
+                  {page2}
+                </Link>
+                <Link to={path} className={style.list__item}>
+                  {page}
+                </Link>
+              </div>
             )}
           </li>
         </ul>

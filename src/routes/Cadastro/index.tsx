@@ -41,7 +41,7 @@ export default function Cadastro() {
 
   return (
     <div className={style.container}>
-      <Header page="LOGIN" path="/login" />
+      <Header page="LOGIN" path="/login" path2="/" />
       <div className={style.signup}>
         <h1 className={style.title}>FAZER CADASTRO</h1>
         <form className={style.form} onSubmit={handleSubmit}>

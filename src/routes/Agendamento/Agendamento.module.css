@@ -3,7 +3,7 @@
    justify-content: center;
    font-family: var(--secondary-font);
    height: 100%;
-   margin: 200px auto;
+   margin: 150px auto;
 }
 
 .servicoSelecionado {
@@ -53,7 +53,7 @@
 }
 
 .agendamento input {
-   width: 50%;
+   width: 90%;
 }
 
 .show {

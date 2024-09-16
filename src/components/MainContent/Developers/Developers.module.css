@@ -33,7 +33,6 @@
    padding: 1em;
    justify-content: center;
    gap: .5em;
-   margin: 1em;
 }
 
 .title {
@@ -41,11 +40,22 @@
 }
 
 .socialMedia {
-   text-decoration: none;
-   color: #000;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 1em;
+}
+
+.socialMediaLogo {
    transition: .2s ease-in;
 }
 
-.socialMedia:hover {
-   color: var(--secondary-color);
+.socialMediaLogo:hover {
+   opacity: 80%;
 }
+
+.socialMediaLogo img {
+   width: 10vw;
+}
+

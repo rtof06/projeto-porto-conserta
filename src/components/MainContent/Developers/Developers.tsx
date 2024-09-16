@@ -1,4 +1,7 @@
 import style from "./Developers.module.css";
+import logoInsta from "../../../img/Instagram92.png";
+import logoGitHub from "../../../img/GitHub92.png";
+import logoLinkedin from "../../../img/LinkedIn92.png";
 import { useState } from "react";
 import DeveloperCard from "./DeveloperModal/DeveloperCard";
 
@@ -43,10 +46,18 @@ export default function Developers({
           setModalOpen={() => setIsModalVisible(!isModalVisible)}
         >
           <div className={style.content}>
-            <h2 className={style.title}>Redes sociais</h2>  
-            <a href={instagram} className={style.socialMedia}>Instagram</a>          
-            <a href={github} className={style.socialMedia}>GitHub</a>          
-            <a href={linkedin} className={style.socialMedia}>LinkedIn</a>          
+            <h2 className={style.title}>Redes sociais</h2>
+            <div className={style.socialMedia}>
+              <a href={instagram} className={style.socialMediaLogo}>
+                <img src={logoInsta} alt="" />
+              </a>
+              <a href={github} className={style.socialMediaLogo}>
+                <img src={logoGitHub} alt="" />
+              </a>
+              <a href={linkedin} className={style.socialMediaLogo}>
+                <img src={logoLinkedin} alt="" />
+              </a>
+            </div>
           </div>
         </DeveloperCard>
       </div>
