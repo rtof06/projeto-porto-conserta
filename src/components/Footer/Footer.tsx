@@ -12,7 +12,7 @@ export default function Footer() {
   const redesSociais: {id: string, link:string, img: string, alt: string}[] = [
     {
       id: "instagram",
-      link: "https://instagram.com/portoseguro",
+      link: "https://instagram.com/porto",
       img: `${logoInstragram}`,
       alt: "Logo Instagram"
     },
@@ -24,13 +24,13 @@ export default function Footer() {
     },
     {
       id: "tiktok",
-      link: "https://tiktok.com/portoseguro",
+      link: "https://tiktok.com/@portoseguro",
       img: `${logoTikTok}`,
       alt: "Logo TikTok"
     },
     {
       id: "linkedin",
-      link: "https://linkedin.com/in/porto",
+      link: "https://linkedin.com/company/porto",
       img: `${logoLinkedin}`,
       alt: "Logo LinkedIn"
     },
@@ -42,7 +42,7 @@ export default function Footer() {
     },
     {
       id:"facebook",
-      link: "https://facebook.com/portoseguro",
+      link: "https://www.facebook.com/porto",
       img: `${logoFacebook}`,
       alt: "Logo Facebook"
     },
