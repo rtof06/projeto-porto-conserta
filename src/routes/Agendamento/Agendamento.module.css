@@ -2,7 +2,8 @@
    display: flex;
    justify-content: center;
    font-family: var(--secondary-font);
-   padding: 13em;
+   height: 100%;
+   margin: 200px auto;
 }
 
 .servicoSelecionado {

@@ -70,6 +70,7 @@ export default function Cadastro() {
                  type="date" 
                  id="birthday" 
                  name="birthday"
+                 placeholder="Data de nascimento"
                  inputmode="numeric" 
                  pattern="\d{2}/\d{2}/\d{4}" 
                  required={true}
@@ -138,7 +139,8 @@ export default function Cadastro() {
                 type="text"
                 name="city"
                 id="city"
-                placeholder="Cidade"                required={true}
+                placeholder="Cidade"
+                required={true}
               />
             </div>
             <div className={style.state}>
@@ -177,7 +179,7 @@ export default function Cadastro() {
                 name="year"
                 id="year"
                 min={1900}
-                max={2030}
+                max={2025}
                 placeholder="Ano"
                 required={true}
               />

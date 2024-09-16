@@ -3,7 +3,8 @@
    flex-direction: column;
    align-items: center;
    font-family: var(--secondary-font);
-   padding: 9em;
+   padding-top: 100px;
+   margin-bottom: 100px;
 }
 
 .login {
@@ -75,6 +76,7 @@
    background: var(--aux-color);
    box-shadow: 1px 4px 2px var(--grey-color);
    transition: .2s ease-in;
+   text-align: center;
 }
 
 .signup:hover {
