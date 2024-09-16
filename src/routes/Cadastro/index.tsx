@@ -35,21 +35,7 @@ export default function Cadastro() {
     addNewUser(email, password)
   }
 
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [birthday, setBirthday] = useState("");
   const [email, setEmail] = useState("");
-  const [cpf, setCPF] = useState("");
-  const [cnh, setCNH] = useState("");
-  const [phone, setPhone] = useState("");
-  const [cep, setCEP] = useState("");
-  const [street, setStreet] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-  const [brand, setBrand] = useState("");
-  const [model, setModel] = useState("");
-  const [year, setYear] = useState("");
-  const [plate, setPlate] = useState("");
   const [password, setPassword] = useState("");
   const [secPassword, setSecPassword] = useState("");
 
@@ -67,7 +53,6 @@ export default function Cadastro() {
                 name="name"
                 id="name"
                 placeholder="Nome"
-                onChange={(e) => setName(e.target.value)}
                 required={true}
               />
             </div>
@@ -77,7 +62,6 @@ export default function Cadastro() {
                 name="lastName"
                 id="lastName"
                 placeholder="Sobrenome"
-                onChange={(e) => setLastName(e.target.value)}
                 required={true}
               />
             </div>
@@ -88,7 +72,6 @@ export default function Cadastro() {
                  name="birthday"
                  inputmode="numeric" 
                  pattern="\d{2}/\d{2}/\d{4}" 
-                 onChange={(e) => setBirthday(e.target.value)} 
                  required={true}
               />
             </div>
@@ -108,7 +91,6 @@ export default function Cadastro() {
                 name="cpf"
                 id="cpf"
                 placeholder="CPF"
-                onChange={(e) => setCPF(e.target.value)}
                 required={true}
               />
             </div>
@@ -118,7 +100,6 @@ export default function Cadastro() {
                 name="cnh"
                 id="cnh"
                 placeholder="CNH"
-                onChange={(e) => setCNH(e.target.value)}
                 required={true}
               />
             </div>
@@ -128,7 +109,6 @@ export default function Cadastro() {
                 name="phone"
                 id="phone"
                 placeholder="Telefone"
-                onChange={(e) => setPhone(e.target.value)}
                 required={true}
               />
             </div>
@@ -141,7 +121,6 @@ export default function Cadastro() {
                 name="cep"
                 id="cep"
                 placeholder="CEP"
-                onChange={(e) => setCEP(e.target.value)}
                 required={true}
               />
             </div>
@@ -151,7 +130,6 @@ export default function Cadastro() {
                 name="street"
                 id="street"
                 placeholder="Rua e número"
-                onChange={(e) => setStreet(e.target.value)}
                 required={true}
               />
             </div>
@@ -160,9 +138,7 @@ export default function Cadastro() {
                 type="text"
                 name="city"
                 id="city"
-                placeholder="Cidade"
-                onChange={(e) => setCity(e.target.value)}
-                required={true}
+                placeholder="Cidade"                required={true}
               />
             </div>
             <div className={style.state}>
@@ -171,7 +147,6 @@ export default function Cadastro() {
                 name="state"
                 id="state"
                 placeholder="Estado"
-                onChange={(e) => setState(e.target.value)}
                 required={true}
               />
             </div>
@@ -184,7 +159,6 @@ export default function Cadastro() {
                 name="brand"
                 id="brand"
                 placeholder="Marca"
-                onChange={(e) => setBrand(e.target.value)}
                 required={true}
               />
             </div>
@@ -194,7 +168,6 @@ export default function Cadastro() {
                 name="model"
                 id="model"
                 placeholder="Modelo"
-                onChange={(e) => setModel(e.target.value)}
                 required={true}
               />
             </div>
@@ -206,7 +179,6 @@ export default function Cadastro() {
                 min={1900}
                 max={2030}
                 placeholder="Ano"
-                onChange={(e) => setYear(e.target.value)}
                 required={true}
               />
             </div>
@@ -216,7 +188,6 @@ export default function Cadastro() {
                 name="plate"
                 id="plate"
                 placeholder="Placa"
-                onChange={(e) => setPlate(e.target.value)}
                 required={true}
               />
             </div>
