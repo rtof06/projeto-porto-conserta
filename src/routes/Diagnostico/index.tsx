@@ -11,7 +11,7 @@ export default function Diagnostico() {
 
   return (
     <>
-      <Header page="OFICINAS" path="/oficinas" />
+      <Header page="OFICINAS" path="/oficinas" path2="/" />
       <div className={style.container}>
         <BackgroundBox title="DIAGNÓSTICO DO CARRO">
           <div className={style.diagnosticos}>

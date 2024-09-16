@@ -7,7 +7,7 @@ import { oficinas } from "../../types/oficinas";
 export default function Oficinas() {
   return (
     <div className="container">
-      <Header page="VOLTAR" path="#" />
+      <Header page="VOLTAR" path="#" path2="/"/>
       <div className={style.oficinas}>
         <BackgroundBox title="OFICINAS">
           {oficinas.map((oficina) => (

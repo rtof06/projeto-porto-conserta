@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <>
-      <Header page="LOGIN" path="/login" />
+      <Header page="LOGIN" path="/login" page2="OFICINAS" path2="/oficinas" />
       <Outlet />
       <MainContent
         title="PORTO CONSERTA"

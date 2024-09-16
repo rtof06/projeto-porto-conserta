@@ -43,7 +43,7 @@ export default function Login() {
 
   return (
     <div className={style.container}>
-      <Header page="" path="/" />
+      <Header page="" path="/" path2="/"/>
       <div className={style.login}>
         <h1 className={style.title}>FAZER LOGIN</h1>
         <form className={style.form} onSubmit={handleSubmit}>

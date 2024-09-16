@@ -8,7 +8,7 @@ export default function ErrorPage() {
 
    return (
       <div className={style.erro}>
-         <Header page="" path="/"/>
+         <Header page="" path="/" path2="/"/>
          <h1>Erro 404 - Página não encontrada.</h1>
          <div>
             <figure className={style.img404}>

@@ -35,7 +35,7 @@ export default function Agendamento() {
 
   return (
     <>
-      <Header page="OFICINAS" path="/oficinas" />
+      <Header page="OFICINAS" path="/oficinas" path2="/" />
       <div className={style.container}>
         <BackgroundBox title="AGENDAMENTO DE SERVIÇO">
           <h2 className={style.servicoSelecionado}>

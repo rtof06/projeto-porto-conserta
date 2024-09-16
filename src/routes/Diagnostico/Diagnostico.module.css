@@ -1,7 +1,7 @@
 .container {
    display: flex;
    justify-content: center;
-   margin: 2em;
+   margin: 2em 0;
 }
 
 #diagnostico {

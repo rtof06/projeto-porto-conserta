@@ -19,7 +19,7 @@ export default function EsqueceuASenha() {
 
   return (
     <div className={style.main}>
-      <Header page="LOGIN" path="/login" />
+      <Header page="LOGIN" path="/login" path2="/" />
       <BackgroundBox title="Recuperar minha senha">
         <div className={style.container}>
           <form className={style.form} onSubmit={emailBackup}>

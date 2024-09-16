@@ -1,6 +1,6 @@
 import logoFacebook from "../../img/Facebook F.png";
-import logoInstragram from "../../img/Instagram.png";
-import logoLinkedin from "../../img/LinkedIn.png";
+import logoInstragram from "../../img/InstagramP.png";
+import logoLinkedin from "../../img/LinkedInP.png";
 import logoTikTok from "../../img/TikTok.png";
 import logoX from "../../img/TwitterX.png";
 import logoYoutube from "../../img/YouTube.png";

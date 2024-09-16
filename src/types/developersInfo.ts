@@ -10,7 +10,7 @@ export const developers: { image: string; name: string; rm: string; alt: string,
          rm: "RM558186",
          alt: "Foto do Pedro",
          insta: "https://instagram.com/pdroandrad",
-         linkedin: "https://linkedin.com/in/pdroandrad",
+         linkedin: "https://linkedin.com/in/pedro-andrade-83a7382a9",
          github: "https://github.com/pdroandrad"
       },
       {
@@ -18,8 +18,8 @@ export const developers: { image: string; name: string; rm: string; alt: string,
          name: "Victor Alves Carmona",
          rm: "RM555726",
          alt: "Foto do Victor",
-         insta: "https://instagram.com/carmowa",
-         linkedin: "https://linkedin.com/in/carmowa",
+         insta: "https://instagram.com/thecaarmona",
+         linkedin: "https://linkedin.com/in/victor-alves-carmona-92a918305",
          github: "https://github.com/carmowa"
       },
       {
