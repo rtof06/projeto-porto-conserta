@@ -43,6 +43,7 @@ export default function Developers({
           setModalOpen={() => setIsModalVisible(!isModalVisible)}
         >
           <div className={style.content}>
+            <h2 className={style.title}>Redes sociais</h2>  
             <a href={instagram} className={style.socialMedia}>Instagram</a>          
             <a href={github} className={style.socialMedia}>GitHub</a>          
             <a href={linkedin} className={style.socialMedia}>LinkedIn</a>          

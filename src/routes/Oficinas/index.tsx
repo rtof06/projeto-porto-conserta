@@ -18,6 +18,7 @@ export default function Oficinas() {
               adress={oficina.street}
               phone={oficina.phone}
               info={oficina.atendimento}
+              key={oficina.id}
             />
           ))}
         </BackgroundBox>

@@ -33,6 +33,7 @@ export default function Home() {
                 github={dev.github}
                 instagram={dev.insta}
                 linkedin={dev.linkedin}
+                key={dev.rm}
               />
             ))}
           </div>
