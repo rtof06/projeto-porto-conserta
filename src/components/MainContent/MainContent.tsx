@@ -1,5 +1,4 @@
 import style from "./MainContent.module.css";
-import Developers from "./Developers/Developers";
 
 type MainContentProps = {
   title: string;
@@ -17,7 +16,6 @@ export default function MainContent({
       <h1 className={style.title}>{title}</h1>
       <h3 className={style.subtitle}>{subtitle}</h3>
       <p className={style.paragraph}>{paragraph}</p>
-      <Developers />
     </div>
   );
 }

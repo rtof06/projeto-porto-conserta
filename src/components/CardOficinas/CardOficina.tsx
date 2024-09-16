@@ -8,6 +8,7 @@ type CardOficina = {
   uf: string;
   adress: string;
   phone: string;
+  info: string
 };
 
 export default function CardOficina({
@@ -16,6 +17,7 @@ export default function CardOficina({
   uf,
   adress,
   phone,
+  info
 }: CardOficina) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -37,6 +39,7 @@ export default function CardOficina({
           <h2 className={style.cardTitle}>{title}</h2>
           <p className={style.cardInfo}>{adress}</p>
           <p className={style.cardInfo}>{phone}</p>
+          <p className={style.info}>{info}</p>
         </div>
       </ModalOficina>
     </div>

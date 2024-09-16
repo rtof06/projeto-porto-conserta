@@ -1,0 +1,18 @@
+.team {
+   display: flex;
+   justify-content: center;
+}
+
+.developers {
+   margin: 1em 0;
+   text-align: center;
+   color: var(--aux-color);
+}
+
+.teamTitle {
+   font-family: var(--secondary-font);
+   font-size: 2rem;
+   padding: 1em;
+   font-weight: 500;
+   text-shadow: 2px 2px 10px #000;
+}

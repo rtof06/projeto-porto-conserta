@@ -4,12 +4,35 @@ import PrimaryInput from "../../components/Inputs/PrimaryInputs";
 import Buttons from "../../components/Buttons/Buttons";
 import { FormEvent, useState } from "react";
 import { users } from "../../auth/users";
+import { useNavigate } from "react-router-dom";
 
 export default function Cadastro() {
   document.title = "Cadastro";
 
+  const navigate = useNavigate();
+
+  const checkPassword = (pw:string, secPw:string) => {
+    if (pw !== secPw) {
+      alert("As senhas não coincidem. Por favor cheque novamente!");
+    }
+  }
+
+  const addNewUser = (email:string, pw:string) => {
+    const emailExists = users.some((user) => user.email === email)
+    
+    if (emailExists) {
+      alert("Esse email já está cadastrado. Por favor, utilize outro email ou faça seu login na página de login.");
+    } else {
+      users.push({email: email, password: pw});
+      alert("Cadastro realizado!");
+      navigate("/login");
+    }
+  }
+
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    checkPassword(password, secPassword);
+    addNewUser(email, password)
   }
 
   const [name, setName] = useState("");
@@ -28,10 +51,11 @@ export default function Cadastro() {
   const [year, setYear] = useState("");
   const [plate, setPlate] = useState("");
   const [password, setPassword] = useState("");
+  const [secPassword, setSecPassword] = useState("");
 
   return (
     <div className={style.container}>
-      <Header page="" path="/" />
+      <Header page="LOGIN" path="/login" />
       <div className={style.signup}>
         <h1 className={style.title}>FAZER CADASTRO</h1>
         <form className={style.form} onSubmit={handleSubmit}>
@@ -59,12 +83,13 @@ export default function Cadastro() {
             </div>
             <div className={style.birthday}>
               <PrimaryInput
-                type="date"
-                name="birthday"
-                id="birthday"
-                placeholder="Data de nascimento"
-                onChange={(e) => setBirthday(e.target.value)}
-                required={true}
+                 type="date" 
+                 id="birthday" 
+                 name="birthday"
+                 inputmode="numeric" 
+                 pattern="\d{2}/\d{2}/\d{4}" 
+                 onChange={(e) => setBirthday(e.target.value)} 
+                 required={true}
               />
             </div>
             <div className={style.email}>
@@ -218,11 +243,9 @@ export default function Cadastro() {
                 type="password"
                 name="password"
                 id="password"
-                minLength={3}
-                maxLength={8}
                 placeholder="Confirme sua senha"
                 title="Confirme sua senha (mín. de 3 caracteres e máximo de 8)"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setSecPassword(e.target.value)}
                 required={true}
               />
             </div>

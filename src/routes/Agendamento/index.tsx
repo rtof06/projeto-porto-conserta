@@ -6,16 +6,18 @@ import Header from "../../components/Header/Header";
 import PrimaryInput from "../../components/Inputs/PrimaryInputs";
 import Buttons from "../../components/Buttons/Buttons";
 import style from "./Agendamento.module.css";
+import { useState } from "react";
 
 export default function Agendamento() {
   document.title = "Agendamento";
 
   const navigate = useNavigate();
+  const [buscaOficina, setBuscaOficina] = useState("")
 
   const { id } = useParams();
   const servico = services.find((service) => service.id == Number(id));
 
-  function handleAgendar(e: any) {
+  const handleAgendar = (e: any) => {
     e.preventDefault();
     alert("Serviço agendado!");
     navigate("/diagnostico");
@@ -31,18 +33,18 @@ export default function Agendamento() {
           </h2>
           <div className={style.agendamento}>
             <PrimaryInput
-              type="search"
+              type="text"
               name="oficina"
               id="idOficina"
               placeholder="Filtrar por oficina"
-              onChange={() => "teste"}
+              onChange={(e) => setBuscaOficina(e.target.value)}
               required={true}
             />
+            <label htmlFor="date">Escolha o dia que deseja agendar</label>
             <PrimaryInput
               type="date"
               name="date"
               id="idData"
-              placeholder="Escolha o dia"
               onChange={() => "teste"}
               required={true}
             />

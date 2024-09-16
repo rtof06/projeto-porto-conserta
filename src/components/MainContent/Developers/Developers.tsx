@@ -1,23 +1,53 @@
 import style from "./Developers.module.css";
-import { developers } from "../../../types/developersInfo"
+import { useState } from "react";
+import DeveloperCard from "./DeveloperModal/DeveloperCard";
 
-export default function Developers() {
+type DevelopersProps = {
+  name: string;
+  rm: string;
+  img: string;
+  alt: string;
+  linkedin: string;
+  github: string;
+  instagram: string;
+};
+
+export default function Developers({
+  name,
+  rm,
+  img,
+  alt,
+  github,
+  instagram,
+  linkedin,
+}: DevelopersProps) {
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   return (
     <section className={style.developers}>
-      <h2 className={style["team-title"]}>Time Amplexus Technology</h2>
-      <div className={style.team}>
-        {developers.map((dev) => (
-          <div className={style.developer} key={dev.rm}>
-            <img
-              src={dev.image}
-              alt={dev.alt}
-              className={style["dev-picture"]}
-            />
-            <p className={style.name}>{dev.name}</p>
-            <p className={style.rm}>{dev.rm}</p>
+      <div className={style.developer} key={rm}>
+        <img
+          src={img}
+          alt={alt}
+          className={style["dev-picture"]}
+          onClick={() => {
+            setIsModalVisible(true);
+          }}
+        />
+        <p className={style.name}>{name}</p>
+        <p className={style.rm}>{rm}</p>
+      </div>
+      <div className={style.modal}>
+        <DeveloperCard
+          isOpen={isModalVisible}
+          setModalOpen={() => setIsModalVisible(!isModalVisible)}
+        >
+          <div className={style.content}>
+            <a href={instagram} className={style.socialMedia}>Instagram</a>          
+            <a href={github} className={style.socialMedia}>GitHub</a>          
+            <a href={linkedin} className={style.socialMedia}>LinkedIn</a>          
           </div>
-        ))}
+        </DeveloperCard>
       </div>
     </section>
   );
