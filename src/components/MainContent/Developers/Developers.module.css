@@ -24,6 +24,7 @@
 .content {
    font-family: var(--primary-font);
    display: flex;
+   flex-direction: column;
    position: static;
    background-color: var(--aux-color);
    border-radius: 10px;
@@ -33,6 +34,10 @@
    justify-content: center;
    gap: .5em;
    margin: 1em;
+}
+
+.title {
+   color: #000;
 }
 
 .socialMedia {

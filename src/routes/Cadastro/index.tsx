@@ -242,7 +242,7 @@ export default function Cadastro() {
               <PrimaryInput
                 type="password"
                 name="password"
-                id="password"
+                id="CheckPassword"
                 placeholder="Confirme sua senha"
                 title="Confirme sua senha (mín. de 3 caracteres e máximo de 8)"
                 onChange={(e) => setSecPassword(e.target.value)}

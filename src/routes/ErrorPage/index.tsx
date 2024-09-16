@@ -1,4 +1,5 @@
 import erro404 from "../../img/img404.jpg";
+import Header from "../../components/Header/Header";
 import style from "./ErrorPage.module.css";
 
 export default function ErrorPage() {
@@ -7,6 +8,7 @@ export default function ErrorPage() {
 
    return (
       <div className={style.erro}>
+         <Header page="" path="/"/>
          <h1>Erro 404 - Página não encontrada.</h1>
          <div>
             <figure className={style.img404}>

@@ -14,13 +14,47 @@
    margin: 1em;
 }
 
+.oficinas {
+   display: none;
+   flex-direction: column;
+   gap: .3em;
+   background-color: var(--aux-color-low-opacity);
+   border-radius: 0 0 10px 10px;
+   list-style: none;
+   padding: .8em;
+   border-bottom: solid 2px var(--primary-color);;
+}
+
+.oficinaItem {
+   border-top: solid 2px var(--primary-color);
+   background-color: var(--aux-color);
+   border-radius: 5px;
+   padding: .3em;
+   font-size: 1rem;
+   cursor: default;
+}
+
+.oficinaItem:hover {
+   background-color: var(--primary-color);
+   border-top: solid 2px var(--aux-color);
+   color: var(--aux-color);
+}
+
+.subTitle {
+   font-size: 1.5rem;
+   color: var(--grey-color);
+}
+
 .agendamento {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 1em;
 }
 
 .agendamento input {
    width: 50%;
+}
+
+.show {
+   display: flex;
 }
