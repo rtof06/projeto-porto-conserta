@@ -4,22 +4,25 @@ import BackgroundBox from "../../components/BackgroundBox/BackgroundBox";
 import PrimaryInput from "../../components/Inputs/PrimaryInputs";
 import Buttons from "../../components/Buttons/Buttons";
 import { FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function EsqueceuASenha() {
+  document.title = "Recuperação de senha";
 
-  document.title = "Recuperação de senha"
+  const navigate = useNavigate();
 
   function emailBackup(e: FormEvent) {
     e.preventDefault();
-
+    alert("Cheque seu email!");
+    navigate("/");
   }
 
   return (
     <div className={style.main}>
-      <Header page="" path="/" />
+      <Header page="LOGIN" path="/login" />
       <BackgroundBox title="Recuperar minha senha">
         <div className={style.container}>
-          <form className={style.form}>
+          <form className={style.form} onSubmit={emailBackup}>
             <PrimaryInput
               type="email"
               name="email"
@@ -27,7 +30,9 @@ export default function EsqueceuASenha() {
               placeholder="Digite seu email"
               required={true}
             />
-            <Buttons type="submit" id="btnBackup" onClick={emailBackup}>Recuperar</Buttons>
+            <Buttons type="submit" id="btnBackup">
+              Recuperar
+            </Buttons>
           </form>
         </div>
       </BackgroundBox>
