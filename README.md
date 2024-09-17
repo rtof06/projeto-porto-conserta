@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# Projeto Porto Conserta - Sprint 3 Challenge Porto & FIAP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# *PÁGINA INICIAL*
 
-Currently, two official plugins are available:
+A página inicial é a página de entrada do site, apresentando um breve resumo de o que é a Porto Conserta e os desenvolvedores, sendo que, ao clicar na imagem do desenvolvedor, abre um modal com as redes sociais do próprio.
+![image](https://github.com/user-attachments/assets/472a03b4-f1bd-4c6a-bbed-4fd06af75a90)
+![image](https://github.com/user-attachments/assets/146f2535-7503-427f-a036-c85f38bd9d1c)
+![image](https://github.com/user-attachments/assets/fd0a66ce-6940-4d3f-8280-09211740897e)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+# *PÁGINA DE LOGIN*
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Esta página serve para o usuário se logar no site e poder agendar o serviço/manutenção que deseja que seja feita.
 
-- Configure the top-level `parserOptions` property like this:
+Pelo fato de não utilizarmos Back-End integrado ao Front-End, armazenamos os usuários (email e senha) dentro do arquivo _users.ts_ na pasta _auth_.
+Você pode utilizar como usuários:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+email: ricardo@email.com
+senha: Ricardo123
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+email: pedro@email.com
+senha: Pedro123
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+email: victor@email.com
+senha: Victor123
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+email: ale@email.com
+senha: Ale123
+
+![image](https://github.com/user-attachments/assets/c3f123ae-0434-4bc1-8cab-eed60441900b)
+
+---
+
+# *PÁGINA DE CADASTRO*
+
+Na página de cadastro, você tem diversas opções para preencher como cadastro no site.
+
+As principais informações são as do email e senha que serão criados, pois eles serão adicionados à lista de usuários automaticamente.
+![image](https://github.com/user-attachments/assets/f1b1c6c2-ada1-4b1c-99a0-4088c003dc26)
+![image](https://github.com/user-attachments/assets/7ab27a97-8608-422d-b791-4c32d4d57485)
+![image](https://github.com/user-attachments/assets/a600b807-a127-4024-96a0-a28a877b7eaf)
+
+---
+
+# *PÁGINA DE DIAGNÓSTICO DO VEÍCULO*
+
+Na página de diagnóstico do veículo, o usuário seleciona o serviço que deseja que seja feito no seu veículo.
+
+Ao clicar, você é redirecionado à página de Agendamento.
+![image](https://github.com/user-attachments/assets/8483f699-aada-4bab-803b-fa1446889af3)
+![image](https://github.com/user-attachments/assets/a4013c3a-42dc-46b4-9f42-149b0917e0d9)
+
+---
+
+# *PÁGINA DE AGENDAMENTO DO SERVIÇO*
+
+Esta página serve para que o usuário possa agendar o serviço que selecionou anteriormente.
+
+Informando a Oficina que deseja fazer a manutenção e a data do agendamento.
+![image](https://github.com/user-attachments/assets/f73880f8-82a3-4824-b241-c55a2b1990a8)
+
+---
+
+# *PÁGINA DE OFICINAS*
+
+Esta página é a página que apresenta algumas as oficinas em formato de cards.
+
+Ao clicar na oficina, um modal aparece na tela com as informações de endereço, número e horário de antendimento.
+![image](https://github.com/user-attachments/assets/349b5839-f012-4190-9903-297fcaf5b6c0)
+![image](https://github.com/user-attachments/assets/befb17a8-7617-494b-b00e-6d07693c0051)
+![image](https://github.com/user-attachments/assets/6b0978ae-a094-4296-ab0e-37a7fe6d6374)
+
