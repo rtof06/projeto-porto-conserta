@@ -1,5 +1,8 @@
 # Projeto Porto Conserta - Sprint 3 Challenge Porto & FIAP
 
+# *LINK DO VÍDEO*
+https://youtu.be/vvKemaLJsDw
+
 # *PÁGINA INICIAL*
 
 A página inicial é a página de entrada do site, apresentando um breve resumo de o que é a Porto Conserta e os desenvolvedores, sendo que, ao clicar na imagem do desenvolvedor, abre um modal com as redes sociais do próprio.
