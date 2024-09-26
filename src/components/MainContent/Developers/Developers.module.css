@@ -56,6 +56,11 @@
 }
 
 .socialMediaLogo img {
-   width: 10vw;
+   width: 3vw;
 }
 
+@media (max-width: 630px) {
+   .socialMediaLogo img {
+      width: 10vw;
+   }
+}
